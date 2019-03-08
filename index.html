@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.0/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Comento</title>
+</head>
+
+<body id="main">
+    <nav class="navbar">
+        <a href="#" id="logo">Comento</a>
+        <ul class="navlist">
+            <li>
+                <button class="nosBtn" id="aboutBtn">About</button>
+            </li>
+            <li>
+                <button class="nosBtn" id="lessonsBtn">Lessons</button>
+            </li>
+            <li>
+                <button class="nosBtn" id="contactBtn">Contact</button>
+            </li>
+        </ul>
+    </nav>
+    <div id="landing-container">
+        <div id="hello">
+            <h1>Comento</h1>
+            <h2>선린인터넷고등학교
+                <br class="line-break">코딩 봉사 동아리</h2>
+            <div id="apply-btn">
+                <a href="#">지원하기</a>
+            </div>
+        </div>
+    </div>
+    <div id="about-container">
+        <div class="title">
+            <h1>저희는</h1>
+        </div>
+        <div class="abouts">
+            <div class="about">
+                <div class="question">
+                    <h1>What is Comento?</h1>
+                </div>
+                <div class="answ">
+                    <p>코멘토는 선린 인터넷 고등학교의 정기 봉사 자율 동아리 입니다. 코딩을 배우고 싶은데 어떻게 배워야 할지 모르겠는 친구들, 수많은 컴퓨터 언어 중 무슨 언어를 배울지 모르겠는
+                        친구들,
+                        코딩에 관심이 있는 친구들을 위해 검증된 실력을 가진 학생들이 중학교 친구들에게 코딩 멘토링을 해주는 재능 기부 봉사를 운영 중입니다.</p>
+                </div>
+            </div>
+            <div class="about">
+                <div class="question">
+                    <h1>저희가
+                        <br class="line-break"> 가르치는 것은..</h1>
+                </div>
+                <div class="answ">
+                    <p>
+                        저희의 기본 커리큘럼은 스크래치 프로그래밍입니다. 청소년들이 쉽게 프로그래밍을 배울수 있게 고안한 스크래치로
+                        블럭을 쌓으며 자신이 원하는 프로그램을 만들어 프로그래밍과 친해질 수 있게
+                        가르치고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="lessons-container">
+        <div class="title">
+            <h1>커리큘럼</h1>
+        </div>
+        <div id="lessons">
+            <div class="lesson">
+                <a href="https://scratch.mit.edu/about" target="_blank"><img src="img.jpg" alt="Scratch" class="icon"></a>
+                <div class="desc">
+                    <h2>Scratch</h2>
+                    <p>스크래치를 이용하면 인터렉티브한 이야기, 게임, 애니메이션을 직접 만들 수 있고, 그 작품을 온라인 커뮤니티에서 다른 사람들과 공유할 수 있습니다.
+
+                        스크래치를 통해 어린이들은 창의적 사고, 체계적 추론, 협동 작업을 배우게 됩니다. 이런 능력은 21세기를 살아가는데 필수적이죠.
+                        
+                        스크래치는 MIT 미디어랩의 Lifelong Kindergarten Group 에서 운영하는 프로젝트이며 무료입니다!
+                    </p>
+                    <h4>to be continued...</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact-container">
+        <div class="title">
+            <h1>Contact Us</h1>
+        </div>
+        <div id="contact">
+            <div id="facebook">
+                <a href="https://www.facebook.com/sunrincomento/">
+                    <i data-feather="facebook"></i>
+                </a>
+            </div>
+            <div id="phone">
+                <h2>부장) 김소영: 010-7167-9481</h2>
+                <h2>쀼장) 성재열: 010-8629-5864</h2>
+            </div>
+        </div>
+    </div>
+    <button id="up-btn">
+        <i data-feather="arrow-up"></i>
+    </button>
+    <footer>
+        <span id="copyright">© 2018. JWS. All rights reserved.</span>
+    </footer>
+
+    <script>
+        feather.replace()
+        function scrollDown(name) {
+            var fullname = "#" + name + "-container";
+            document.querySelector(fullname).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        var first = document.getElementById("aboutBtn");
+        var second = document.getElementById("lessonsBtn");
+        var third = document.getElementById("contactBtn");
+        var upBtn = document.getElementById("up-btn")
+        var menuBtn = document.getElementById("menu-btn")
+        first.addEventListener('click', () => {
+            scrollDown('about');
+        });
+        second.addEventListener('click', () => {
+            scrollDown('lessons')
+        });
+        third.addEventListener('click', () => {
+            scrollDown('contact');
+        });
+        upBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        window.onscroll = function () {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                upBtn.style.visibility = "visible";
+            } else {
+                upBtn.style.visibility = "hidden";
+            }
+        };
+    </script>
+</body>
+
+</html>

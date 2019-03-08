@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+:root {
+    --main-color: #444444;
+    --title-color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: var(--main-color);
+}
+.nosBtn {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+}
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar #logo {
+    color: black;
+    font-size: 2em;
+}
+
+.navlist {
+    float: right;
+}
+
+.navlist li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.navlist li a {
+    color: black;
+}
+
+#landing-container {
+    width: 100%;
+    height: 550px;
+    background-image: url("https://images.pexels.com/photos/89724/pexels-photo-89724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#apply-btn {
+    margin: 0 auto;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#apply-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+polygon {
+    width: 100%;
+    height: 100%;
+}
+
+#apply-btn:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+#about-container .abouts {
+    margin-top: 50px;
+}
+
+#about-container .about {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+#about-container .about .question {
+    line-height: 2.5em;
+    color: #444444;
+}
+
+#about-container .about .answ {
+    margin-left: 20px;
+}
+
+#lesson-container {
+    text-align: center;
+}
+
+.icon{
+    width: 20vw;
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+}
+
+.title {
+    width: 40%;
+    margin: 100px auto 50px auto;
+}
+
+.title h1 {
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    background-color: var(--title-color);
+    color: var(--main-color);
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+}
+
+#lessons-container #lessons {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#lessons-container #lessons .lesson {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+#lessons-container #lessons .lesson svg {
+    width: 150px;
+    height: 150px;
+    color: #cccccc;
+}
+#lessons-container #lessons .lesson .desc{
+    text-align: center;     
+}
+
+#lessons-container #lessons .lesson .desc h2 {
+    font-weight: 700;
+}
+
+#facebook svg {
+    color: var(--main-color);
+    width: 100px;
+    height: 100px;
+}
+
+#contact-container #contact {
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    position: relative;
+    top: 150px;
+    height: 6em;
+    line-height: 6em;
+    margin: 0;
+    background-color: #444444;
+    text-align: center;
+}
+
+#up-btn {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    left: 50%;
+    bottom: 130px;
+    transform: translate(-50%);
+    border: none;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    visibility: hidden;
+}
+
+#copyright {
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    float: right;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    #hello {
+        margin: 10px;
+    }
+    #about-container .about {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .navlist {
+        display: none;
+    }
+    .title {
+        width: 80%;
+    }
+    #contact-container #contact {
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    h2>.line-break {
+        display: none;
+    }
+}
